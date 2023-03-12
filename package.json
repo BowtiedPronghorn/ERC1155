@@ -2,7 +2,10 @@
   "name": "nft-dapp-starter-kit",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bowtiedpronghorn.github.io/ERC1155/",
   "scripts": {
+    "predeploy": "yarn next export",
+    "deploy": "gh-pages -d build -r https://github.com/BowtiedPronghorn/ERC1155.git",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
