@@ -1,8 +1,11 @@
 {
   "name": "nft-dapp-starter-kit",
   "version": "0.1.0",
+  "homepage": "https://bowtiedpronghorn.github.io/ERC1155",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -16,6 +19,7 @@
     "ethers": "^5.6.5",
     "framer-motion": "^6",
     "fs": "^0.0.1-security",
+    "gh-pages": "^5.0.0",
     "keccak256": "^1.0.6",
     "merkletreejs": "^0.2.31",
     "next": "12.1.6",
