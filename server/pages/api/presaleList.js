@@ -12,7 +12,7 @@ module.exports = require("fs");
 
 /***/ }),
 
-/***/ 5730:
+/***/ 3239:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -21,7 +21,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7147);
 /* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_merkleProofs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2827);
+/* harmony import */ var _utils_merkleProofs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6326);
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 
 const addresses = JSON.parse(fs__WEBPACK_IMPORTED_MODULE_0___default().readFileSync("data/allowlists/presaleList.json", "utf-8"));
@@ -48,12 +49,12 @@ function handler(req, res) {
         proof,
         valid
     });
-};
+}
 
 
 /***/ }),
 
-/***/ 2827:
+/***/ 6326:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -71,8 +72,7 @@ var external_keccak256_default = /*#__PURE__*/__webpack_require__.n(external_kec
 
 
 const generateMerkleProof = (addresses, address)=>{
-    const leafNodes = addresses.map((addr)=>external_keccak256_default()(addr)
-    );
+    const leafNodes = addresses.map((addr)=>external_keccak256_default()(addr));
     const merkleTree = new external_merkletreejs_namespaceObject.MerkleTree(leafNodes, (external_keccak256_default()), {
         sortPairs: true
     });
@@ -96,7 +96,7 @@ const generateMerkleProof = (addresses, address)=>{
 var __webpack_require__ = require("../../webpack-api-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(5730));
+var __webpack_exports__ = (__webpack_exec__(3239));
 module.exports = __webpack_exports__;
 
 })();

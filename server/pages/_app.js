@@ -4,7 +4,7 @@ exports.id = 888;
 exports.ids = [888];
 exports.modules = {
 
-/***/ 4852:
+/***/ 1003:
 /***/ ((module) => {
 
 // Exports
@@ -16,7 +16,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 4637:
+/***/ 4289:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -30,6 +30,8 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
 var jsx_runtime_ = __webpack_require__(997);
+// EXTERNAL MODULE: ./styles/globals.css
+var globals = __webpack_require__(6764);
 // EXTERNAL MODULE: external "@chakra-ui/react"
 var react_ = __webpack_require__(8930);
 ;// CONCATENATED MODULE: external "@chakra-ui/theme-tools"
@@ -71,7 +73,7 @@ const clientOptions = {
             options: {
                 qrcode: true
             }
-        }), 
+        })
     ]
 };
 const WagmiClient = (0,external_wagmi_.createClient)(clientOptions);
@@ -82,10 +84,10 @@ var icons_ = __webpack_require__(4513);
 var next_link = __webpack_require__(1664);
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 // EXTERNAL MODULE: ./styles/Navbar.module.css
-var Navbar_module = __webpack_require__(5392);
+var Navbar_module = __webpack_require__(6498);
 var Navbar_module_default = /*#__PURE__*/__webpack_require__.n(Navbar_module);
 // EXTERNAL MODULE: ./components/web3/ConnectWallet.tsx + 1 modules
-var ConnectWallet = __webpack_require__(6714);
+var ConnectWallet = __webpack_require__(7591);
 ;// CONCATENATED MODULE: ./components/NavBar.tsx
 
 
@@ -104,8 +106,7 @@ const FaOpensea = ()=>/*#__PURE__*/ _jsx(Box, {
             height: "18px",
             src: "assets/opensea.png"
         })
-    })
-;
+    });
 const NavBar = ()=>{
     const { isOpen , onOpen , onClose  } = (0,react_.useDisclosure)();
     return /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -208,7 +209,7 @@ const NavBar = ()=>{
 /* harmony default export */ const components_NavBar = (NavBar);
 
 // EXTERNAL MODULE: ./styles/Footer.module.css
-var Footer_module = __webpack_require__(4852);
+var Footer_module = __webpack_require__(1003);
 var Footer_module_default = /*#__PURE__*/__webpack_require__.n(Footer_module);
 ;// CONCATENATED MODULE: ./components/Footer.tsx
 
@@ -241,10 +242,9 @@ var external_react_ = __webpack_require__(6689);
 
 
 function MyApp({ Component , pageProps  }) {
-    const { 0: mounted , 1: setMounted  } = (0,external_react_.useState)(false);
+    const [mounted, setMounted] = (0,external_react_.useState)(false);
     // prevent hydration UI bug: https://blog.saeloun.com/2021/12/16/hydration.html
-    (0,external_react_.useEffect)(()=>setMounted(true)
-    , []);
+    (0,external_react_.useEffect)(()=>setMounted(true), []);
     if (!mounted) return null;
     // customize your chakra theme here
     const theme = (0,react_.extendTheme)({
@@ -284,6 +284,13 @@ function MyApp({ Component , pageProps  }) {
 
 /***/ }),
 
+/***/ 6764:
+/***/ (() => {
+
+
+
+/***/ }),
+
 /***/ 4513:
 /***/ ((module) => {
 
@@ -300,43 +307,11 @@ module.exports = require("@chakra-ui/react");
 
 /***/ }),
 
-/***/ 2796:
+/***/ 3280:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/head-manager-context.js");
-
-/***/ }),
-
-/***/ 4014:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/i18n/normalize-locale-path.js");
-
-/***/ }),
-
-/***/ 8524:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/is-plain-object.js");
-
-/***/ }),
-
-/***/ 8020:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/mitt.js");
-
-/***/ }),
-
-/***/ 4406:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/page-path/denormalize-page-path.js");
+module.exports = require("next/dist/shared/lib/app-router-context.js");
 
 /***/ }),
 
@@ -348,6 +323,14 @@ module.exports = require("next/dist/shared/lib/router-context.js");
 
 /***/ }),
 
+/***/ 1751:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/shared/lib/router/utils/add-path-prefix.js");
+
+/***/ }),
+
 /***/ 3938:
 /***/ ((module) => {
 
@@ -356,67 +339,35 @@ module.exports = require("next/dist/shared/lib/router/utils/format-url.js");
 
 /***/ }),
 
-/***/ 9565:
+/***/ 1109:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-asset-path-from-route.js");
+module.exports = require("next/dist/shared/lib/router/utils/is-local-url.js");
 
 /***/ }),
 
-/***/ 4365:
+/***/ 8854:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/get-middleware-regex.js");
+module.exports = require("next/dist/shared/lib/router/utils/parse-path.js");
 
 /***/ }),
 
-/***/ 1428:
+/***/ 3297:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/is-dynamic.js");
+module.exports = require("next/dist/shared/lib/router/utils/remove-trailing-slash.js");
 
 /***/ }),
 
-/***/ 1292:
+/***/ 7782:
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("next/dist/shared/lib/router/utils/parse-relative-url.js");
-
-/***/ }),
-
-/***/ 979:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/querystring.js");
-
-/***/ }),
-
-/***/ 6052:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/resolve-rewrites.js");
-
-/***/ }),
-
-/***/ 4226:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/route-matcher.js");
-
-/***/ }),
-
-/***/ 5052:
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("next/dist/shared/lib/router/utils/route-regex.js");
+module.exports = require("next/dist/shared/lib/router/utils/resolve-href.js");
 
 /***/ }),
 
@@ -459,7 +410,7 @@ module.exports = require("wagmi");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, [686,505,397,664,714], () => (__webpack_exec__(4637)));
+var __webpack_exports__ = __webpack_require__.X(0, [664,591], () => (__webpack_exec__(4289)));
 module.exports = __webpack_exports__;
 
 })();
