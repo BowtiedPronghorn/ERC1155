@@ -4,7 +4,7 @@
   "homepage": "https://bowtiedpronghorn.github.io/ERC1155",
   "private": true,
   "scripts": {
-    "predeploy": "yarn build dev",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
